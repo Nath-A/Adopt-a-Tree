@@ -1,2 +1,5 @@
 # Adopt-a-Tree
-Living Live Style Guide with SASS and JavaScript (from Pluralsight)
+Creating a Living Style Guide with Sass and Vanilla JavaScript (from [Pluralsight](https://app.pluralsight.com/library/courses/creating-living-style-guide-sass-vanilla-javascript/table-of-contents))
+
+
+
