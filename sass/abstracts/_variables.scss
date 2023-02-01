@@ -1,0 +1,45 @@
+// ------------------------------------COLORS
+
+$color-primary: #3ABB8D;
+$color-primary-50 :#75C8AA;
+$color-primary-25: #c7E9DD;
+
+$color-secondary: #313C5A;
+$color-secondary-light: #41569C;
+
+$color-red: #D05868;
+$color-blue: #3E9CD0;
+
+$color-white: #FFF;
+$color-black: #000;
+
+$color-grey-light-1: #AAA;
+$color-grey-light-2: #DADEE8;
+$color-grey-light-3: #F1F1F1;
+
+$color-grey-dark-1: #999;
+$color-grey-dark-2: #666;
+$color-grey-dark-3: #222;
+
+$color-font: $color-grey-dark-2;
+$color-link: $color-primary;
+
+// ------------------------------------FONTS
+
+$font-family: "Nunito Sans", sans-serif;
+
+$font-regular: 400;
+$font-semi-bold: 600;
+$font-bold: 700;
+
+$font-size-xs: 1rem;
+$font-size-lg: 1.6rem;
+$font-size-default: 1.4rem;
+$font-size-sm: 1.2rem;
+
+$h1: 2.4rem;
+$h2: 2.2rem;
+$h3: 2rem;
+$h4: 1.8rem;
+$h5: 1.6rem;
+$h6: $font-size-default;

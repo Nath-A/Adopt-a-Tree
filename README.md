@@ -16,4 +16,26 @@ Creating a Living Style Guide with Sass and Vanilla JavaScript (from [Pluralsigh
 
 ### PATTERNS
 ![Layouts](/readme/pages.png)
+**GLOBALS**
+- Logos
+- Colors
+- Icons
+- Grids
+- Media Queries
+- Spacing
+- Alignment
 
+**HTML ELEMENTS**
+- Typography
+- Buttons
+- Forms
+
+**COMPONENTS**
+- Banners
+- Progress Bars
+- Styled Lists
+- Cards
+- Carousels
+- Content Blocks
+- Avatars
+- Tabs
