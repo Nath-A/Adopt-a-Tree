@@ -8,3 +8,10 @@ body
     line-height: 1.5;
     font-size: $font-size-default;
 }
+
+::selection
+{
+    background-color: $color-primary;
+    color: $color-white;
+
+}
