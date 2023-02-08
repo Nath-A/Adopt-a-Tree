@@ -1,8 +1,8 @@
 // ------------------------------------COLORS
 
 $color-primary: #3ABB8D;
-$color-primary-50 :#75C8AA;
-$color-primary-25: #c7E9DD;
+$color-primary-light :#75C8AA;
+$color-primary-x-light: #c7E9DD;
 
 $color-secondary: #313C5A;
 $color-secondary-light: #41569C;
@@ -13,15 +13,14 @@ $color-blue: #3E9CD0;
 $color-white: #FFF;
 $color-black: #000;
 
-$color-grey-light-1: #AAA;
-$color-grey-light-2: #DADEE8;
-$color-grey-light-3: #F1F1F1;
+$color-grey-100: #F1F1F1;
+$color-grey-300: #DADEE8;
+$color-grey-500: #AAA;
+$color-grey-550: #999;
+$color-grey-600: #666;
+$color-grey-900: #222;
 
-$color-grey-dark-1: #999;
-$color-grey-dark-2: #666;
-$color-grey-dark-3: #222;
-
-$color-font: $color-grey-dark-2;
+$color-font: $color-grey-600;
 $color-link: $color-primary;
 
 // ------------------------------------FONTS
