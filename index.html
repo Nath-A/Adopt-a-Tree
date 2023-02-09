@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="styleguide-nav--show">
+    <nav class="styleguide-nav">
         <ul class="styleguide-nav__list">
             <li><a href="#styleguide-section-guidelines">Guidelines</a></li>
             <li><a href="#styleguide-section-logo">Logo</a></li>
@@ -44,8 +44,63 @@
     <main class="styleguide-content">
         <img src="img/svg/logos/logo.svg" alt="Logo Adopt a Tree" width="36" height="36" class="styleguide-logo">
         <h1 class="styleguide-heading">Style Guide</h1>
-        <section id="styleguide-{SECTION-NAME}" class="styleguide-section">
-            <h2>{SECTION_TITLE}</h2>
+        <section id="styleguide-section-guidelines" class="styleguide-section">
+            <h2>guidelines</h2>
+            <div class="styleguide-section__docs">
+                <p>Adopt-a-Tree uses <a href="http://sass-lang.com" target="_blank">Sass</a> as a preprocessor for this
+                    project's CSS.</p>
+                <p>Watch and compile the Sass files using the command line, or a GUI application like <a
+                        href="https://prepros.io" target="_blank">Prepros</a>, or a task runner like <a
+                        href="https://gulpjs.com" target="_blank">Gulp</a>, or a bundler like <a
+                        href="https://webpack.js.org" target="_blank">Webpack</a>.</p>
+                <p>This project uses Vite.js</p>
+
+                <p><span class="styleguide-do">Do</span> use single-line Sass comments (which are the same as
+                    single-line JavaScript comments) for comments that other developers need to see, since they won't
+                    get compiled into the CSS stylesheet.</p>
+                <p><span class="styleguide-dont">Don't</span> edit the <span class="font-bold">generated CSS</span>
+                    files.</p>
+                <p><span class="styleguide-dont">Don't</span> use inline styles. The handful of inline styles in the
+                    style guide are purely for demo.</p>
+
+                <p><span class="styleguide-do">Do </span> use <span class="font-bold">tab</span> to indent your
+                    code.</p>
+                <p><span class="styleguide-do">Do</span> follow hyphen-separated class naming. E.g. <code
+                        class="styleguide-code-inline">list-block</code>.</p>
+                <p>Modifier classes use a double-hyphen naming convention. E.g.<code
+                        class="styleguide-code-inline">list-block--profile</code>.</p>
+                <p><span class="styleguide-do">Do</span> create a separate class or ID for an element which requires
+                    JavaScript to modify its behavior. Prefix it with <code class="styleguide-code-inline">js-</code>
+                    and don't attach any styling to this class or ID.</p>
+                <p><span class="styleguide-do">Do</span> browse through the <em>variables</em>, <em>globals</em>,
+                    <em>spacing</em> and <em>typography</em> partials. They contain plenty of reusable code.
+                </p>
+                <p><span class="styleguide-do">Do</span> use camelCase for naming variables and functions in JavaScript.
+                </p>
+                <p><span class="styleguide-do">Do</span> use semicolons after JavaScript statements.</p>
+                <p><span class="styleguide-do">Do</span> strive for an accessible user interface for users of keyboards
+                    and screen readers.</p>
+                <p><span class="styleguide-do">Do</span> ensure the project works on modern browers, including IE Edge,
+                    Chrome, Firefox, Safari, Android and iOS.</p>
+
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-logo" class="styleguide-section">
+            <h2>logo</h2>
             <div class="styleguide-section__docs">
                 <p>{SECTION_DOCUMENTATION}</p>
             </div>
@@ -61,10 +116,372 @@
                         {DEMO_MARKUP}
                     </div>
                 </div>
-                <button class="styleguide-section__button styleguide-section__button-js">Code</button>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
             </div>
         </section>
-
+        <section id="styleguide-section-colors" class="styleguide-section">
+            <h2>colors</h2>
+            <div class="styleguide-section__docs">
+                <p>Use variables or classes for colors.</p>
+                <p>Background colors have a <code class="styleguide-code-inline">-bg</code> suffix.</p>
+                <p>To incorporate a new color, add the color variable to the <em>variables</em> partial and refer to it
+                    in the Sass map inside the <em>colors</em> partial.</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-spacing" class="styleguide-section">
+            <h2>spacing</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-alignment" class="styleguide-section">
+            <h2>alignment</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+      <p>{SECTION_DOCUMENTATION}</p>
+    </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-media" class="styleguide-section">
+            <h2>media</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-grid" class="styleguide-section">
+            <h2>grid</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-typography" class="styleguide-section">
+            <h2>typography</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-images" class="styleguide-section">
+            <h2>images</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-icons" class="styleguide-section">
+            <h2>icons</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                    <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+                </div>
+            </div>
+        </section>
+        <section id="styleguide-section-buttons" class="styleguide-section">
+            <h2>buttons</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-forms" class="styleguide-section">
+            <h2>forms</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-content-blocks" class="styleguide-section">
+            <h2>blocks</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-progress-bars" class="styleguide-section">
+            <h2>progress bars</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-avatars" class="styleguide-section">
+            <h2>avatars</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-banners" class="styleguide-section">
+            <h2>banners</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-lists" class="styleguide-section">
+            <h2>lists</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-cards" class="styleguide-section">
+            <h2>cards</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-tabs" class="styleguide-section">
+            <h2>tabs</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
+        <section id="styleguide-section-sliders" class="styleguide-section">
+            <h2>sliders & Carousels</h2>
+            <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+            </div>
+            <div class="styleguide-section__block">
+                <div class="styleguide-section__files">Reference files: </div>
+                <h3>{DEMO_TITLE}</h3>
+                <!-- Add optional documentation for this demo -->
+                <!-- <div class="styleguide-section__docs">
+                <p>{SECTION_DOCUMENTATION}</p>
+              </div> -->
+                <div class="styleguide-section__demo">
+                    <div class="styleguide-section__demo-each">
+                        {DEMO_MARKUP}
+                    </div>
+                </div>
+                <button class="styleguide-section__button js-styleguide-section__button">Code</button>
+            </div>
+        </section>
     </main>
     <script type="module" src="script/main.js"></script>
     <script src="script/style-guide.js"></script>

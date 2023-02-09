@@ -65,7 +65,7 @@ function styleBlockAppendCode()
     const demo = styleBlock.querySelector(".styleguide-section__demo-each");
     const code = reIndentCode(escapeHtml(demo.innerHTML));
     const container = document.createElement("div");
-    container.classList.add("styleguide-section__code-block", "styleguide-section__code-block--js");
+    container.classList.add("styleguide-section__code-block", "js-styleguide-section__code-block");
     const preBlock = document.createElement("pre");
     const codeBlock = document.createElement("code");
     codeBlock.innerHTML = code;
@@ -78,14 +78,17 @@ function styleBlockAppendCode()
 styleBlockAppendCode();
 
 
-const btnCode = document.querySelectorAll(".styleguide-section__button-js");
+const btnCode = document.querySelectorAll(".js-styleguide-section__button");
 const btnCodeArray = Array.from(btnCode);
-
+console.log(btnCodeArray);
 // Toggle style guide demos on clicking "Code" button
 function btnToggleCode(element)
 {
+  //PROBLEM BELOW ! 
   const parentCode = element.parentNode.querySelector(".styleguide-section__code-block");
+  console.log(parentCode);
   parentCode.classList.toggle("styleguide-section__code-block--show");
+
 }
 
 btnCodeArray.forEach(function (button)

@@ -3,45 +3,13 @@
 // ---------------------------------------------
 // STYLE GUIDE
 
-
-
-// Variables: Style Guide: Sidebar
-// $styleguide-sidebar-width: 20rem;
-// $zindex-styleguide-menu: 1000;
-
-
-// ---------------------------------------------
-// STYLE GUIDE: BUTTON TO TOGGLE SIDEBAR ON MOBILE
-
-// .styleguide-nav__button
-// {
-//   background-color: $color-grey-100;
-//   border-radius: 0;
-//   height: $spacing-3;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   width: 100%;
-//   z-index: $zindex-styleguide-menu;
-
-//   @media(min-width: $media-sm)
-//   {
-//     display: none;
-//   }
-// }
-
-// Fucking grid because too complicated for nothing this stupid JS button ! 
 body
 {
-  display: grid;
-  grid-template-columns: minmax(6rem, auto) 1fr;
-
-  @media only screen and (max-width:$media-sm)
-  {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-  }
+  color: $color-font;
+  background-color: $color-grey-100;
+  font-size: $font-size-default;
+  font-weight: $font-regular;
+  font-family: $font-family;
 }
 
 // ---------------------------------------------
@@ -51,27 +19,71 @@ body
 {
   background-color: $color-white;
   font-weight: $font-semi-bold;
-  padding-bottom: 150px; // Prevents cutting off menu from the bottom on browsers like Firefox
-  // width: $styleguide-sidebar-width;
+  width: 30rem;
   height: 100vh;
   position: fixed;
-  bottom: 0;
+  top: 0;
   overflow: auto;
+  background-color: $color-primary;
   // z-index: $zindex-styleguide-menu;
-  transition: all 0.2s linear;
+  // transition: all 0.2s linear;
 
-
-
-  @media(min-width: $media-sm)
+  @media only screen and (max-width: $media-sm)
   {
-    left: 0;
+    width: initial;
+    height: initial;
+    position: initial;
     top: 0;
+  }
+
+  &__list
+  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    li
+    {
+      display: grid;
+      width: 100%;
+
+      &:nth-last-child(-n+2) a
+      {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @media only screen and (max-width:$media-sm)
+    {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li
+      {
+        margin: 0.5rem;
+        width: initial;
+      }
+    }
+
+
+
   }
 
   a
   {
     padding: $spacing-half $spacing;
     display: block;
+    color: $color-white;
+    text-decoration: none;
+    display: grid;
+    justify-items: center;
+
+    font-size: $h4;
 
     &.active
     {
@@ -80,32 +92,8 @@ body
     }
   }
 
-  &__list
-  {
-    @media only screen and (max-width:$media-sm)
-    {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
 
-      li
-      {
-        margin: 0.5rem;
-      }
-    }
-  }
 }
-
-// .styleguide-nav--show
-// {
-//   left: 0;
-//   transition: all 0.2s linear;
-
-//   @media(max-width: $media-sm-max)
-//   {
-//     box-shadow: 0px 4px 10px rgba($color-black, 0.1);
-//   }
-// }
 
 // Style Guide: Labels for Sidebar
 .styleguide-link-label
@@ -138,14 +126,19 @@ body
 
 .styleguide-content
 {
+  margin-left: 32rem;
   padding: ($spacing * 5) 0 $spacing-3 0;
-  max-width: $media-lg;
+  // max-width: $media-lg;
 
   // @media(min-width: $media-sm)
   // {
   //   padding: $spacing-3 $spacing-2 0 ($styleguide-sidebar-width + $spacing-2);
   //   margin: 0 auto;
   // }
+  @media only screen and (max-width: $media-sm)
+  {
+    margin: 0;
+  }
 
   pre
   {
@@ -165,12 +158,13 @@ body
   >h2
   {
     text-align: center;
+    text-transform: capitalize;
   }
 }
 
 .styleguide-section__docs
 {
-  max-width: 650px;
+  max-width: 65rem;
   margin: 0 auto $spacing-2 auto;
 }
 
@@ -218,7 +212,7 @@ body
   display: block;
 
   // Only hide the selectors with a parent with class "styleguide-demo-block"
-  .styleguide-section__demo &
+  .styleguide-section__demo
   {
     display: none;
   }
@@ -252,9 +246,9 @@ body
   color: $color-red;
 }
 
-.btn-styleguide-code
+.styleguide-section__button
 {
   margin: $spacing-2 auto $spacing-3;
   display: block;
-  width: 100px;
+  width: 10rem;
 }
