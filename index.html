@@ -11,14 +11,13 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <title>Adopt a Tree : Styleguide</title>
 </head>
 
 <body>
-    <nav class="styleguide-nav">
-        <button class="styleguide-nav__button" id="js-btn-styleguide-menu">MENU</button>
-        <ul class="styleguide-nav__list" id="js-styleguide-sidebar">
+    <nav class="styleguide-nav--show">
+        <ul class="styleguide-nav__list">
             <li><a href="#styleguide-section-guidelines">Guidelines</a></li>
             <li><a href="#styleguide-section-logo">Logo</a></li>
             <li><a href="#styleguide-section-colors">Colors</a></li>
@@ -43,7 +42,7 @@
         </ul>
     </nav>
     <main class="styleguide-content">
-        <img src="img/svg/logos/logo.svg" alt="Logo Adopt a Tree" width="36" height="36" classe="styleguide-logo">
+        <img src="img/svg/logos/logo.svg" alt="Logo Adopt a Tree" width="36" height="36" class="styleguide-logo">
         <h1 class="styleguide-heading">Style Guide</h1>
         <section id="styleguide-{SECTION-NAME}" class="styleguide-section">
             <h2>{SECTION_TITLE}</h2>
@@ -68,6 +67,7 @@
 
     </main>
     <script type="module" src="script/main.js"></script>
+    <script src="script/style-guide.js"></script>
 </body>
 
 </html>

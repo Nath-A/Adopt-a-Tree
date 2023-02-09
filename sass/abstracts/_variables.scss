@@ -1,11 +1,11 @@
 // ------------------------------------COLORS
 
 $color-primary: #3ABB8D;
-$color-primary-light :#75C8AA;
-$color-primary-x-light: #c7E9DD;
+$color-primary-300 :#75C8AA;
+$color-primary-200: #c7E9DD;
 
 $color-secondary: #313C5A;
-$color-secondary-light: #41569C;
+$color-secondary-300: #41569C;
 
 $color-red: #D05868;
 $color-blue: #3E9CD0;
@@ -16,11 +16,11 @@ $color-black: #000;
 $color-grey-100: #F1F1F1;
 $color-grey-300: #DADEE8;
 $color-grey-500: #AAA;
-$color-grey-550: #999;
-$color-grey-600: #666;
+$color-grey-600: #999;
+$color-grey-700: #666;
 $color-grey-900: #222;
 
-$color-font: $color-grey-600;
+$color-font: $color-grey-700;
 $color-link: $color-primary;
 
 // ------------------------------------FONTS
@@ -52,7 +52,7 @@ $icon-spacing : 0.5rem;
 $bp-600 : calc(600em/16);
 //
 // $icon-spacing-lg: calc($icon-spacing*2);
-$icon-spacing-lg: $icon-spacing *2;
+$icon-spacing-lg: calc($icon-spacing*2);
 
 // Font Icons : Sizes
 $icon-size-lg: 1.6rem;
@@ -61,10 +61,10 @@ $icon-size-xxl: 2.4rem;
 
 // ------------------------------------ MEDIA QUERIES
 // Media Queries : Min-width
-$media-lg : 120rem;
-$media-md : 900rem;
-$media-sm : 600rem;
-$media-xs : 300rem;
+$media-lg : 1200px;
+$media-md : 900px;
+$media-sm : 600px;
+$media-xs : 300px;
 
 // Media Queries : Max-width
 $media-lg-max: $media-lg - 1;
@@ -77,12 +77,16 @@ $grid-column-count: 12;
 
 //Grid : Gutters
 $grid-gutter: 7.5px;
-$grid-gutter-sm: $grid-gutter / 2;
+$grid-gutter-sm: calc($grid-gutter/2);
 
-$grid-gutter-lg: $grid-gutter * 2;
+$grid-gutter-lg: calc($grid-gutter*2);
 
 // ------------------------------------ SPACING
 $spacing: 1rem;
-$spacing-2: $spacing * 2;
-$spacing-3: $spacing * 3;
-$spacing-half: $spacing / 2;
+$spacing-2: calc($spacing*2);
+$spacing-3: calc($spacing*3);
+$spacing-half: calc($spacing/2);
+
+// ------------------------------------ STYLEGUIDE
+$font-family-code :"Ubuntu Mono",
+monospace;
