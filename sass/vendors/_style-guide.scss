@@ -6,7 +6,7 @@
 body
 {
   color: $color-font;
-  background-color: $color-grey-100;
+  background-color: $color-gray-100;
   font-size: $font-size-default;
   font-weight: $font-regular;
   font-family: $font-family;
@@ -25,8 +25,9 @@ body
   top: 0;
   overflow: auto;
   background-color: $color-primary;
-  // z-index: $zindex-styleguide-menu;
-  // transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @media only screen and (max-width: $media-sm)
   {
@@ -48,7 +49,7 @@ body
       display: grid;
       width: 100%;
 
-      &:nth-last-child(-n+2) a
+      &:nth-last-child(-n + 2) a
       {
         display: grid;
         grid-template-columns: repeat(2, auto);
@@ -57,7 +58,7 @@ body
       }
     }
 
-    @media only screen and (max-width:$media-sm)
+    @media only screen and (max-width: $media-sm)
     {
       flex-direction: row;
       flex-wrap: wrap;
@@ -69,9 +70,6 @@ body
         width: initial;
       }
     }
-
-
-
   }
 
   a
@@ -91,15 +89,13 @@ body
       background-color: $color-secondary-300;
     }
   }
-
-
 }
 
 // Style Guide: Labels for Sidebar
 .styleguide-link-label
 {
   color: $color-secondary-300;
-  background: $color-grey-100;
+  background: $color-gray-100;
   border-radius: 50%;
   font-size: $font-size-xs;
   font-weight: $font-bold;
@@ -107,7 +103,6 @@ body
   margin-left: $spacing-half;
   display: inline-block;
 }
-
 
 // ---------------------------------------------
 // STYLE GUIDE: CONTENT
@@ -150,12 +145,12 @@ body
 {
   padding: ($spacing * 6) 0 0 0;
 
-  >.styleguide-section__docs
+  > .styleguide-section__docs
   {
     padding: 0 $spacing-2;
   }
 
-  >h2
+  > h2
   {
     text-align: center;
     text-transform: capitalize;
@@ -173,14 +168,14 @@ body
   background-color: $color-white;
   padding: $spacing-2;
 
-  >h3
+  > h3
   {
-    color: $color-grey-700;
+    color: $color-gray-700;
     text-align: center;
     padding: 0 0 $spacing 0;
   }
 
-  >h4
+  > h4
   {
     text-align: center;
     margin-bottom: $spacing;
@@ -251,4 +246,26 @@ body
   margin: $spacing-2 auto $spacing-3;
   display: block;
   width: 10rem;
+}
+
+// Style Guide: Demo Block : Colors for background color boxes
+
+.styleguide-section__demo-each
+{
+  display: flex;
+}
+
+.styleguide-section__demo-block
+{
+  min-width: 10rem;
+  min-height: 2rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: $spacing 0 $spacing-2;
+
+  &.color-white-bg,
+  &.color-gray-100
+  {
+    border: 1px solid $color-gray-300;
+  }
 }
